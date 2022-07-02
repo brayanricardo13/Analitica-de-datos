@@ -70,7 +70,7 @@ View(Mensual_Renta_Fija)
 
 hist(Mensual_Renta_Fija$`PENSION BONDS`)
 
-
+data.frame(Mensual_Renta_Fija)
 
 
 
