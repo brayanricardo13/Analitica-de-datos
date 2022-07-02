@@ -55,11 +55,49 @@ z <- (174/200 - 0.90) / sqrt(0.90 * (1 - 0.90) / 200)
 z  # Para obtener el valor del estadístico
 
 
-
-
-
 install.packages("plyr")
 library("plyr")
+
+library(readxl)
+Mensual_Renta_Fija <- read_excel("C:/Users/Sala_000/Downloads/Mensual Renta Fija.xlsx", 
+                                 col_types = c("numeric", "text", "numeric", 
+                                               "numeric", "numeric", "numeric", 
+                                               "numeric", "numeric", "numeric", 
+                                               "numeric", "numeric", "numeric"))
+
+View(Mensual_Renta_Fija)
+
+
+hist(Mensual_Renta_Fija$`PENSION BONDS`)
+
+
+
+
+
+
+
+BS.Value <- function(S, K, r, q=0, T, sigma)
+  {  values <- c(2)    
+  d1 <- (log(S/K)+(r-q+sigma^2/2)*T)/(sigma*sqrt(T)) 
+  d2 <- d1 - sigma * sqrt(T)   
+values[1] <- S*exp(-q*T)*pnorm(d1) - K*exp(-r*T)*pnorm(d2) 
+values[2] <- K*exp(-r*T) * pnorm(-d2) - S*exp(-q*T)*pnorm(-d1)  
+values}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
