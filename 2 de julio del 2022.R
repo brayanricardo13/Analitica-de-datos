@@ -47,14 +47,19 @@ plot(diff(Datos_Grupo_4$`TRM (COP/USD)`),type="l")
 
 
 
+###########################################################################################
+# Prueba binomial 
+ 
+z <- (174/200 - 0.90) / sqrt(0.90 * (1 - 0.90) / 200)
+
+z  # Para obtener el valor del estadístico
 
 
 
 
 
-
-
-
+install.packages("plyr")
+library("plyr")
 
 
 
